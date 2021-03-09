@@ -21,7 +21,7 @@ while not index_command == "End":
     counter_shoot_targets += 1
 
     for current_index in range(len(targets_list)):
-        if targets_list[current_index] == -1:  
+        if targets_list[current_index] == -1:
             continue
         if targets_list[current_index] > current_value:
             targets_list[current_index] -= current_value
