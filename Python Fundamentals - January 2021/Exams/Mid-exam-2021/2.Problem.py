@@ -25,7 +25,10 @@ while not commands == "Eat":
 
     commands = input()
 
-while "Out of stock" in biscuits_list:
-    biscuits_list.remove("Out of stock")
+biscuits_list_formatted = biscuits_list.copy()
+for i in range(len(biscuits_list)):
+    if biscuits_list[i] == "Out of stock":
+        del biscuits_list_formatted[i]
 
-print(' '.join(biscuits_list))
+print(' '.join(biscuits_list_formatted))
+
