@@ -1,42 +1,23 @@
 
-from functools import wraps
-
-
-def make_bold(func):
-    @wraps(func)
-    def wrapper(*args, **kwargs):
-        rv = func(*args, **kwargs)
-        return f'<b>{rv}</b>'
-
+def make_bold(function):
+    def wrapper(*args):
+        result = f"<b>{function(*args)}</b>"
+        return result
     return wrapper
 
 
-def make_italic(func):
-    @wraps(func)
-    def wrapper(*args, **kwargs):
-        rv = func(*args, **kwargs)
-        return f'<i>{rv}</i>'
-
+def make_italic(function):
+    def wrapper(*args):
+        result = f"<i>{function(*args)}</i>"
+        return result
     return wrapper
 
 
-def make_underline(func):
-    @wraps(func)
-    def wrapper(*args, **kwargs):
-        rv = func(*args, **kwargs)
-        return f'<u>{rv}</u>'
-
+def make_underline(function):
+    def wrapper(*args):
+        result = f"<u>{function(*args)}</u>"
+        return result
     return wrapper
-
-
-@make_bold
-@make_italic
-@make_underline
-def greet(name):
-    return f"Hello, {name}"
-
-
-print(greet("Peter"))
 
 
 @make_bold
