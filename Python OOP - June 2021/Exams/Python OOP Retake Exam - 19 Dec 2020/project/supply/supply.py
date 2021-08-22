@@ -17,4 +17,5 @@ class Supply(ABC):
         self.__needs_increase = value
 
     def apply(self, survivor):
-        pass
+        survivor.needs += self.needs_increase
+

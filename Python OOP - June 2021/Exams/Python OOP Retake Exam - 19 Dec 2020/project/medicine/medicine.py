@@ -17,4 +17,4 @@ class Medicine(ABC):
         self.__health_increase = value
 
     def apply(self, survivor):
-        pass
+        survivor.health += self.health_increase
