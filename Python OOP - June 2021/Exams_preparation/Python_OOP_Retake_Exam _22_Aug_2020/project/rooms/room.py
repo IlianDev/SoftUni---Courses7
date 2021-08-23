@@ -4,10 +4,9 @@ from project.people.child import Child
 
 class Room:
     def __init__(self, name, budget, members_count):
-        self.name = name
+        self.family_name = name
         self.budget = budget
         self.members_count = members_count
-
         self.children = []
         self.expenses = 0
 
@@ -18,15 +17,15 @@ class Room:
     @expenses.setter
     def expenses(self, value):
         if value < 0:
-            raise ValueError("Expenses cannot be negative")
+            raise ValueError("Expenses cannot "
+                             "be negative")
         self.__expenses = value
 
-    # TODO calculate_expenses
     def calculate_expenses(self, *args):
         total_expenses = 0
         for list_el in args:
             for el in list_el:
-
+                # TODO implement get_monthly_expense in Child class
                 if isinstance(el, Appliance):
                     total_expenses += el.get_monthly_expense()
                 elif isinstance(el, Child):
