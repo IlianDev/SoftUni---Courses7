@@ -25,12 +25,10 @@ function speedRestrinction(speed, area) {
         case "residential":
             speedZone = residential;
             break;
-
     }
     if (speed > speedZone) {
         difference = speed - speedZone;
     }
-
     if (difference != 0) {
         if (difference <= 20) {
             overlimit = "speeding";
@@ -39,8 +37,7 @@ function speedRestrinction(speed, area) {
         } else {
             overlimit = "reckless driving"
         }
-        console.log(`The speed is ${difference} km/h faster than the allowed speed of ${speedZone} - {status}`)
-
+        console.log(`The speed is ${difference} km/h faster than the allowed speed of ${speedZone} - ${overlimit}`)
     } else {
         console.log(`Driving ${speed} km/h in a ${speedZone} zone`)
     }
