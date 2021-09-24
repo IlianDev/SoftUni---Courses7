@@ -1,6 +1,9 @@
-names = ['Pesho', 'Gosho', 'Stamat', 'Mariyka']
+function solve(arr) {
+    arr.sort(sortingEl)
+    console.log(arr)
 
-for (const index in names) {
-    console.log(names[index]);
-     
+    function sortingEl(a, b) {
+        return a - b
+    }
 }
+solve([7, -2, 8, 9])
