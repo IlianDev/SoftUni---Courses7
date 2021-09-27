@@ -13,7 +13,7 @@ function population(townAsStrings) {
         }
     }
     for (const name in towns) {
-        console.log(`towns.${name} : ${towns[name]}`);
+        console.log(`${name}: ${towns[name]}`);
     }
 }
 population([
