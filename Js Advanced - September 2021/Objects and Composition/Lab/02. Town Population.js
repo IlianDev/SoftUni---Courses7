@@ -1,15 +1,10 @@
 function population(townAsStrings) {
-    // iterate over input
-    // parse entries
-    // store data
-    // print results 
-
     const towns = {};
     for (let data of townAsStrings) {
-        const tokens = data.split('<->');
+        const givenData = data.split('<->');
 
-        const name = tokens[0];
-        const pop = Number(tokens[1]);
+        const name = givenData[0];
+        const pop = Number(givenData[1]);
 
         if (towns[name] == undefined) {
             towns[name] = pop;
@@ -17,7 +12,9 @@ function population(townAsStrings) {
             towns[name] += pop
         }
     }
-    console.log(towns);
+    for (const name in towns) {
+        console.log(`towns.${name} : ${towns[name]}`);
+    }
 }
 population([
     'Sofia <-> 1200000',
