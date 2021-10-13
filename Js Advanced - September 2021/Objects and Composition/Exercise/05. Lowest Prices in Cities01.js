@@ -4,14 +4,13 @@ function solve(inputArr) {
         let [townName, productName, productPrice] = inputArr[index].split(' | ');
         productPrice = Number(productPrice);
 
-        //ako produkta nqma productName
+       
         // if(!products[productName])
         if (!products.hasOwnProperty(productName)) {
             products[productName] = {};
         }
         products[productName][townName] = productPrice;
     }
-    // Object.entries - връща масив от key value  
     let result = []
     for (const key in products) {
         let townsSorted =Object.entries(products[key]).sort((a, b)=> a[1] - b[1]);
