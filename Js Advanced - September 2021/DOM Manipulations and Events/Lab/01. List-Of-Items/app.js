@@ -1,5 +1,5 @@
 function addItem() {
-    // select input field end read value
+    // select input field and read value
     const input = document.getElementById('newItemText');
 
     // create new <li> and set its content ot input value
