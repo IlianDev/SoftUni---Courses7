@@ -9,5 +9,4 @@ function addItem() {
     document.getElementById('items').appendChild(liElement);
     // nice-to-have clear field
     input.value = '';
-
 }
