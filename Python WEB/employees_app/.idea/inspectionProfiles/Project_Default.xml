@@ -1,0 +1,15 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="djangoProject.tasks.urls.path" />
+          <option value="DjangoProject1.task.urls.path" />
+          <option value="DjangoProject1.task.urls.home" />
+          <option value="DjangoProject1.task.admin.Task" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
